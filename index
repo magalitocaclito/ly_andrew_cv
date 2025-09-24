@@ -1,33 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV d'Andrew Ly</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .download-btn:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ly Andrew — CV</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;padding:1rem;background:#f7f7f7;color:#111}
+    .container{max-width:900px;margin:0 auto}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem}
+    h1{font-size:1.1rem;margin:0}
+    a.download-btn{display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;border:1px solid #ddd;padding:0.35rem 0.5rem;border-radius:6px;background:#fff;color:inherit}
+    a.download-btn svg{width:18px;height:18px}
+    iframe{width:100%;height:80vh;border:1px solid #ddd;border-radius:6px;background:#fff}
+    @media (max-width:600px){iframe{height:60vh}}
+  </style>
 </head>
 <body>
-    <h1>CV d'Andrew Ly</h1>
-    <p>Consultez mon CV ci-dessous :</p>
-    <p><a href="Ly_Andrew_CV.pdf" download class="download-btn">📥 Télécharger le CV</a></p>
-    <p>Ou visualisez-le directement dans votre navigateur :</p>
-    <iframe src="Ly_Andrew_CV.pdf" width="80%" height="600px"></iframe>
+  <div class="container">
+    <div class="header">
+      <h1>Ly Andrew — CV</h1>
+      <a class="download-btn" href="Ly_Andrew_CV.pdf" download="Ly_Andrew_CV.pdf" title="Télécharger le CV">
+        <!-- petite icône SVG (téléchargement) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Télécharger</span>
+      </a>
+    </div>
+
+    <!-- affichage du PDF -->
+    <iframe src="Ly_Andrew_CV.pdf" title="CV de Ly Andrew"></iframe>
+  </div>
 </body>
 </html>
