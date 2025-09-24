@@ -40,15 +40,19 @@
             height: auto;
             margin: 10px 0;
         }
+        .cv-container {
+            width: 100%;
+            overflow: auto; /* Permet de scroller si nécessaire */
+            margin-top: 10px;
+        }
         .cv-preview {
             width: 100%;
-            height: 500px;
+            min-height: 500px; /* Hauteur minimale ajustable */
             border: none;
-            margin-top: 10px;
         }
         @media (max-width: 600px) {
             .cv-preview {
-                height: 300px; /* Réduit la hauteur sur mobile */
+                min-height: 300px; /* Réduit la hauteur sur mobile */
             }
             h1 {
                 font-size: 1.2em;
@@ -65,8 +69,10 @@
         <h1>CV d'Andrew Ly</h1>
         <a href="Ly_Andrew_CV.pdf" download class="download-btn">📥 Télécharger le CV</a>
         <p>Ou visualisez-le directement :</p>
-        <img src="qrcode_image.jpg" alt="QR Code" class="qr-code"> <!-- Remplace par l'URL de ton QR code -->
-        <iframe src="Ly_Andrew_CV.pdf" class="cv-preview"></iframe>
+        <img src="qrcode_image.jpg" alt="" class="qr-code"> <!-- "QR Code" retiré de l'alt -->
+        <div class="cv-container">
+            <embed src="Ly_Andrew_CV.pdf" type="application/pdf" class="cv-preview">
+        </div>
     </div>
 </body>
 </html>
